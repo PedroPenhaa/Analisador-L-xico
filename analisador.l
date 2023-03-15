@@ -29,7 +29,7 @@ faca printf("%11s:palavra_reservada:T_FACA\n", yytext);
 
 (">") printf("%11s:operador_aritimético:T_MAIOR\n", yytext);
 ("</>") printf("%11s:operador_aritimético:T_MENOR\n", yytext);
-("=") printf("%11s:operador_aritimético:T_IGUAL\n", yytext);
+("==") printf("%11s:operador_aritimético:T_IGUAL\n", yytext);
 
 e printf("%11s:palavra_reservada:T_E\n", yytext);
 ou printf("%11s:palavra_reservada:T_OU\n", yytext);
