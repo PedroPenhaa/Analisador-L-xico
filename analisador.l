@@ -1,4 +1,4 @@
-identificador [a-zA-Z]([a-zA-Z0-9])*
+identif [a-zA-Z]([a-zA-Z0-9])*
 numero [0-9]+
 espaco [ \t]+
 novalinha[\n]
@@ -49,9 +49,10 @@ logico printf("%11s:palavra_reservada:T_LOGICO\n", yytext);
 v printf("%11s:palavra_reservada:T_V\n", yytext);
 f printf("%11s:palavra_reservada:T_F\n", yytext);
 
-indentif printf("%11s:palavra_reservada:T_IDENTIF\n", yytext);
-numero printf("%11s:palavra_reservada:T_NUMERO\n", yytext);
-
+{identif} printf("%11s:palavra_reservada:T_IDENTIF\n", yytext);
+{numero} printf("%11s:palavra_reservada:T_NUMERO\n", yytext);
+{espaco} printf("%11s:palavra_reservada:T_ESPAÇO\n", yytext);
+{novalinha} printf("%11s:palavra_reservada:T_ESPAÇO\n", yytext);
 
 %%
 
