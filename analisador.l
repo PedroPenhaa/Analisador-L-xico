@@ -1,4 +1,4 @@
-identificador [a-zA-Z]([a-zA_Z0-9])*
+identificador [a-zA-Z]([a-zA-Z0-9])*
 numero [0-9]+
 espaco [ \t]+
 novalinha[\n]
