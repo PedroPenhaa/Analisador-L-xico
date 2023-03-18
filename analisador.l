@@ -49,10 +49,11 @@ logico printf("%11s:palavra_reservada:T_LOGICO\n", yytext);
 v printf("%11s:palavra_reservada:T_V\n", yytext);
 f printf("%11s:palavra_reservada:T_F\n", yytext);
 
-{identif} printf("%11s:palavra_reservada:T_IDENTIF\n", yytext);
-{numero} printf("%11s:palavra_reservada:T_NUMERO\n", yytext);
-{espaco} printf("%11s:palavra_reservada:T_ESPAÇO\n", yytext);
-{novalinha} printf("%11s:palavra_reservada:T_ESPAÇO\n", yytext);
+{identif} printf("%11s:T_IDENTIF\n", yytext);
+{numero} printf("%11s:T_NUMERO\n", yytext);
+{espaco}        /*  nao faz nada */
+{novalinha}     /*  nao faz nada */
+.    printf("%11s:ERRO_SIMBOLO_NAO_RECONHECIDO!\n", yytext);
 
 %%
 

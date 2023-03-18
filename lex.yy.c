@@ -351,8 +351,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 38
-#define YY_END_OF_BUFFER 39
+#define YY_NUM_RULES 39
+#define YY_END_OF_BUFFER 40
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -362,7 +362,7 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[98] =
     {   0,
-        0,    0,   39,   38,   36,   37,   19,   17,   18,   20,
+        0,    0,   40,   38,   36,   37,   19,   17,   18,   20,
        35,   22,   23,   21,   34,   34,   24,   33,   34,   34,
        34,   34,   34,   34,   32,   36,   35,   34,   34,   34,
        34,   34,   34,   34,   34,   34,   34,   34,   34,   25,
@@ -943,30 +943,35 @@ printf("%11s:palavra_reservada:T_F\n", yytext);
 case 34:
 YY_RULE_SETUP
 #line 52 "analisador.l"
-printf("%11s:palavra_reservada:T_IDENTIF\n", yytext);
+printf("%11s:T_IDENTIF\n", yytext);
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
 #line 53 "analisador.l"
-printf("%11s:palavra_reservada:T_NUMERO\n", yytext);
+printf("%11s:T_NUMERO\n", yytext);
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
 #line 54 "analisador.l"
-printf("%11s:palavra_reservada:T_ESPAÇO\n", yytext);
+/*  nao faz nada */
 	YY_BREAK
 case 37:
 /* rule 37 can match eol */
 YY_RULE_SETUP
 #line 55 "analisador.l"
-printf("%11s:palavra_reservada:T_ESPAÇO\n", yytext);
+/*  nao faz nada */
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 57 "analisador.l"
+#line 56 "analisador.l"
+printf("%11s:ERRO_SIMBOLO_NAO_RECONHECIDO!\n", yytext);
+	YY_BREAK
+case 39:
+YY_RULE_SETUP
+#line 58 "analisador.l"
 ECHO;
 	YY_BREAK
-#line 970 "lex.yy.c"
+#line 975 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1971,7 +1976,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 57 "analisador.l"
+#line 58 "analisador.l"
 
 
 int yywrap(void){
