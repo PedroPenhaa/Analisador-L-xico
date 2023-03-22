@@ -1,29 +1,24 @@
 identif [a-zA-Z]([a-zA-Z0-9])*
 numero [0-9]+
 espaco [ \t]+
-novalinha[\n]
+novalinha [\n]
 
 %%
 
 programa printf("%11s:palavra_reservada:T_PROGRAMA\n", yytext);
 inicio printf("%11s:palavra_reservada:T_INICIO\n", yytext);
-fim printf("%11s:palavra_reservada:T_FIM\n", yytext);
+fimprograma printf("%11s:palavra_reservada:T_FIM\n", yytext);
 
 se printf("%11s:palavra_reservada:T_SE\n", yytext);
 entao printf("%11s:palavra_reservada:T_ENTAO\n", yytext);
 senao printf("%11s:palavra_reservada:T_SENAO\n", yytext);
 fimse printf("%11s:palavra_reservada:T_FIMSE\n", yytext);
 
-enqto printf("%11s:palavra_reservada:T_ENQTO\n", yytext);
-fimenqto printf("%11s:palavra_reservada:T_FIMENQTO\n", yytext);
+enquanto printf("%11s:palavra_reservada:T_ENQTO\n", yytext);
+fimenquanto printf("%11s:palavra_reservada:T_FIMENQTO\n", yytext);
 
 leia printf("%11s:palavra_reservada:T_LEIA\n", yytext);
 escreva printf("%11s:palavra_reservada:T_ESCREVA\n", yytext);
-
-se printf("%11s:palavra_reservada:T_SE\n", yytext);
-entao printf("%11s:palavra_reservada:T_ENTAO\n", yytext);
-senao printf("%11s:palavra_reservada:T_SENAO\n", yytext);
-fimse printf("%11s:palavra_reservada:T_FIMSE\n", yytext);
 
 faca printf("%11s:palavra_reservada:T_FACA\n", yytext);
 
